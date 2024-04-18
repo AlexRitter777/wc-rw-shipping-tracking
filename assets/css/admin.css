@@ -1,0 +1,101 @@
+.debug {
+    margin-top: 10px!important;
+}
+
+.rwwost_btn_add_tracking{
+    margin-top: 7px!important;
+}
+
+.rw-btn-add-tracking-number {
+    width: 100%;
+    margin-top: 10px!important;
+    line-height: 35px!important;
+}
+
+.rw-tracking-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rw-tracking-form-buttons button {
+
+    min-width: 100px;
+}
+
+.rw-order-completed-checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.rw-order-completed-label{
+    margin-right: 3px;
+}
+
+.rw-order-completed-label label {
+    margin-right: 5px;
+}
+
+.rw-tracking-info
+{
+    background: #efefef none repeat scroll 0 0;
+    padding: 10px;
+    position: relative;
+    border-color: #efefef;
+    margin-top: 9px;
+
+}
+
+.rw-tracking-info:after {
+
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+    border-color: #efefef transparent;
+
+
+}
+
+.rw-shipping-info{
+
+    font-size: 11px;
+    color: #999;
+    padding: 10px 10px 3px 10px;
+    margin: 0;
+
+}
+
+.rw-delete-tracking-number{
+    color: #a00;
+}
+
+#wc-rw-shipping-tracking-column-content a{
+    font-size: 11px;
+}
+
+#wc-rw-shipping-tracking-column-content p{
+    line-height: 1em;
+}
+
+.wc-rw-error {
+    border-width: medium!important;
+    border-color: #c00!important;
+}
+
+.opacity {
+    position: relative;
+    z-index: 1000;
+    opacity: 0.3;
+}
+
+#wc-rw-spinner {
+    position: absolute!important;
+    left: 43%!important;
+    top: 30%!important;
+    z-index: 2000!important;
+}

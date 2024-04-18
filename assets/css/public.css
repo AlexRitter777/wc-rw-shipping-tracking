@@ -1,0 +1,45 @@
+/*Tracking info on customer page */
+
+.wc-rw-customer-view-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.wc-rw-customer-view-left a {
+    font-size: 12px;
+}
+
+.wc-rw-customer-view-right {
+    width: 15%;
+}
+
+.wc-rw-customer-view-left .shipping-date {
+    font-size: 12px;
+}
+
+.wc-rw-customer-view-right a {
+    background: #005b9a!important;
+    color: #fff!important;
+    padding: 10px 15px!important;
+    text-decoration: none!important;
+    display: inline-block!important;
+    border-radius: 3px!important;
+    margin-top: 0!important;
+    font-size: 14px!important;
+    text-align: center!important;
+    margin-bottom: 0!important;
+    margin-right: 0!important;
+    line-height: 12px!important;
+    text-transform: none!important;
+    height: 30px!important;
+}
+
+.wc-rw-customer-view-right a:hover{
+    background: #4a93e8!important;
+}
+
