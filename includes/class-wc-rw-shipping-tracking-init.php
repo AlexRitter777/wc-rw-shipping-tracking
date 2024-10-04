@@ -203,7 +203,7 @@ class Wc_Rw_Shipping_Tracking_Init{
 
     public function wc_rw_add_tracking_to_email($order, $sent_to_admin, $plain_text, $email){
 
-        if(!empty($tracking_number = $order->get_meta('tracking_number')) && $email->id = 'order completed'){
+        if(!empty($tracking_number = $order->get_meta('tracking_number')) && $email->id === 'customer_completed_order'){
 
             $shipping_company = $order->get_meta('shipping_company');
             $shipping_url = $order->get_meta('shipping_url');

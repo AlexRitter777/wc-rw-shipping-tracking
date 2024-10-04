@@ -1,9 +1,9 @@
 <?php
 /**
 Plugin Name:  WooCommerce RW Shipping Tracking
-Description: Add shipment tracking number to WooCommerce orders.
-Version: 1.4
-Author: Alexej Bogačev
+Description: Adds shipment tracking number to WooCommerce orders.
+Version: 1.4.1
+Author: Alexej Bogačev (RAIN WOLF s.r.o.)
  */
 
 
