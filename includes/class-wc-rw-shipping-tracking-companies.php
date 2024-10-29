@@ -8,7 +8,7 @@ class Wc_Rw_Shipping_Tracking_Companies
     protected static $shipping_companies = [
 
       'DPD' => [
-          'tracking_url' => 'https://tracking.dpd.de/status/en_EN/parcel/'
+          'tracking_url' => 'https://www.dpdgroup.com/pl/mydpd/my-parcels/incoming?parcelNumber='
       ],
 
       'Post services' => [
