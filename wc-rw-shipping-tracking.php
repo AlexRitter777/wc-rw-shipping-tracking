@@ -2,7 +2,7 @@
 /**
 Plugin Name:  WooCommerce RW Shipping Tracking
 Description: Adds shipment tracking number to WooCommerce orders.
-Version: 1.5.0
+Version: 1.6.0
 Author: Alexej Bogačev (RAIN WOLF s.r.o.)
  */
 
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Wc_Rw_Shipping_Tracking {
 
-    const VERSION = '1.5.0';
+    const VERSION = '1.6.0';
 
 
     public function __construct() {
@@ -28,6 +28,9 @@ class Wc_Rw_Shipping_Tracking {
         //register styles and scripts
         add_action( 'admin_enqueue_scripts', array($this, 'load_admin_scripts'));
         add_action( 'wp_enqueue_scripts', array($this, 'load_public_scripts'));
+
+        // Load the text domain for translations
+        add_action('plugins_loaded', [$this, 'load_text_domain']);
 
         $this->register_ajax_handler();
         $this->initialize_plugin();
@@ -64,16 +67,16 @@ class Wc_Rw_Shipping_Tracking {
 
     public function load_admin_scripts(){
 
-        wp_enqueue_script('ajax-script', WP_PLUGIN_URL  . '/wc-rw-shipping-tracking/assets/js/ajax.js', array('jquery'), self::VERSION, true);
-        wp_enqueue_script('main-script', WP_PLUGIN_URL  . '/wc-rw-shipping-tracking/assets/js/main.js', array('jquery'), self::VERSION, true);
+        wp_enqueue_script('ajax-script', plugins_url('/assets/js/ajax.js', __FILE__ ), array('jquery'), self::VERSION, true);
+        wp_enqueue_script('main-script', plugins_url('/assets/js/main.js', __FILE__ ), array('jquery'), self::VERSION, true);
         wp_localize_script('ajax-script','my_ajax_obj', array('ajax_url' => admin_url( 'admin-ajax.php' ),));
-        wp_enqueue_style( 'style', WP_PLUGIN_URL . '/wc-rw-shipping-tracking/assets/css/admin.css' );
+        wp_enqueue_style( 'style', plugins_url('/assets/css/admin.css', __FILE__ ) );
 
     }
 
     public function load_public_scripts(){
 
-        wp_enqueue_style( 'style', WP_PLUGIN_URL . '/wc-rw-shipping-tracking/assets/css/public.css' );
+        wp_enqueue_style( 'style', plugins_url('/assets/css/public.css', __FILE__ ) );
 
     }
 
@@ -83,6 +86,13 @@ class Wc_Rw_Shipping_Tracking {
 
     }
 
+    /**
+     * Load the plugin text domain for translations.
+     */
+    public function load_text_domain() {
+        // Load the text domain from the /languages directory
+        load_plugin_textdomain('wc-rw-shipping-tracking', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    }
 
 }
 
