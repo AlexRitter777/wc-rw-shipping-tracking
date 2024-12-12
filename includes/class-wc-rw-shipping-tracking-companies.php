@@ -17,6 +17,10 @@ class Wc_Rw_Shipping_Tracking_Companies
 
       'Packeta' => [
           'tracking_url' => 'https://tracking.packeta.com/en_GB/?id='
+      ],
+
+      'DHL Express' => [
+         'tracking_url' => 'https://www.dhl.com/cz-en/home/tracking/tracking-express.html?submit=1&tracking-id='
       ]
 
     ];
