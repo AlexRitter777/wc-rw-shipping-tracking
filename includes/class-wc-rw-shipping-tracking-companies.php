@@ -21,7 +21,15 @@ class Wc_Rw_Shipping_Tracking_Companies
 
       'DHL Express' => [
          'tracking_url' => 'https://www.dhl.com/cz-en/home/tracking/tracking-express.html?submit=1&tracking-id='
-      ]
+      ],
+
+      'Авиа почта' => [
+          'tracking_url' => 'https://www.postaonline.cz/en/trackandtrace/-/zasilka/cislo?parcelNumbers='
+      ],
+
+      'EMS' => [
+          'tracking_url' => 'https://www.postaonline.cz/en/trackandtrace/-/zasilka/cislo?parcelNumbers='
+      ],
 
     ];
 

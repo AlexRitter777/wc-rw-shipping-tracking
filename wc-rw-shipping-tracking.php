@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Wc_Rw_Shipping_Tracking {
 
-    const VERSION = '1.7.1';
+    const VERSION = '1.8.0';
 
 
     public function __construct() {
